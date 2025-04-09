@@ -77,7 +77,7 @@ function Checkout() {
       const totalWeight = items.reduce((total, item) => total + (item.quantity * 0.5), 0);
       
       // Get coefficients from database
-      const coeffResponse = await fetch('http://localhost:5000/api/coefficients');
+      const coeffResponse = await fetch('https://final-project-0vf0.onrender.com/api/coefficients');
       if (!coeffResponse.ok) {
         throw new Error('Failed to fetch coefficients');
       }

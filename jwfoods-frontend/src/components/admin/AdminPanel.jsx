@@ -13,7 +13,7 @@ function AdminPanel() {
     const fetchCoefficients = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/coefficients');
+        const response = await fetch('https://final-project-0vf0.onrender.com/api/coefficients');
         if (!response.ok) throw new Error('Failed to fetch coefficients');
         const data = await response.json();
         setCoeff(data);
@@ -43,7 +43,7 @@ function AdminPanel() {
 
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/coefficients', {
+      const response = await fetch('https://final-project-0vf0.onrender.com/api/coefficients', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(coeff)
