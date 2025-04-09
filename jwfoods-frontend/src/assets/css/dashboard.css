@@ -1,0 +1,129 @@
+.dashboard {
+  background-color: #f8f9fa;
+}
+
+.dashboard__sidebar .btn-outline-danger {
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+}
+
+.dashboard__tabs .nav-link {
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 50px;
+}
+
+.dashboard__tabs .nav-link:hover {
+  background-color: rgba(18, 65, 120, 0.05);
+}
+
+.dashboard__tabs .nav-link.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dashboard__card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dashboard__order-badge {
+  background-color: var(--primary-color) !important;
+}
+
+/* Add spacing between orders */
+.dashboard__orders .table td,
+.dashboard__orders .table th {
+  vertical-align: middle;
+}
+
+.dashboard__orders .btn-outline-primary {
+  border-radius: 50px;
+  font-size: 0.875rem;
+  padding: 0.4rem 1rem;
+}
+
+/* Wrapper for Admin Panel */
+.dashboard__admin-wrapper {
+  padding: 0;
+  background-color: #fff;
+border-radius: 10px !important;
+  overflow: hidden;
+}
+
+
+/* ===== Admin Panel ===== */
+
+.admin__card {
+border-radius: 10px !important;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.admin__header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.admin__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.admin__formula {
+  background-color: rgba(18, 65, 120, 0.1);
+  border-left: 4px solid var(--primary-color);
+border-radius: 10px !important;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin__body .form-label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.admin__body .form-control {
+border-radius: 10px !important;
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.admin__body .btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+border-radius: 10px !important;
+}
+
+.admin__body .btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Alerts */
+.admin__alert-success {
+  background-color: rgba(33, 212, 44, 0.1);
+  border-left: 4px solid var(--secondary-color);
+  color: #155724;
+}
+
+.admin__alert-error {
+  background-color: rgba(255, 0, 0, 0.05);
+  border-left: 4px solid red;
+  color: #842029;
+}
+
+/* Spinner override (optional) */
+.spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+}

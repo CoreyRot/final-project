@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #124178;
+  --secondary-color: #21d42c;
+  --white: #ffffff;
+  --dark: #1b1b1b;
+  --gray-light: #f8f9fa;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+  max-width: 77.5rem;
+}
+
+.navbar {
+  background-color: var(--white);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar-brand img {
+  height: 70px;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18,65,120, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.btn-link {
+  color: var(--primary-color);
+}
+
+.btn-link:hover {
+  color: var(--secondary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}

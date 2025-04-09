@@ -1,0 +1,39 @@
+.corporate__title {
+  color: var(--primary-color);
+}
+
+.corporate__text {
+  color: black !important;
+}
+
+.corporate__intro {
+  background-color: #f8f9fc;
+border-radius: 10px !important;
+  box-shadow: var(--bs-box-shadow) !important;
+}
+
+.corporate__card {
+border-radius: 10px !important;
+  color: #fff !important;
+}
+
+.card-title {
+  color: #fff !important;
+}
+.corporate__card--hours {
+  background-color: var(--primary-color) !important;
+}
+
+.corporate__card--contact {
+  background-color: var(--secondary-color) !important;
+}
+
+.corporate__card--location {
+  background-color: var(--secondary-color) !important;
+}
+
+.corporate__card--cta {
+  background-color: var(--primary-color) !important;
+}
+
+

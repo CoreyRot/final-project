@@ -1,0 +1,32 @@
+#cta {
+    padding: 3rem 0;
+    background-color: var(--primary-color) !important; 
+  border-radius: 10px !important;
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  
+  .cta__card {
+    background-color: var(--primary-color) !important; 
+
+  }
+  
+  .cta__title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .cta__subtitle {
+    font-size: 1rem;
+    color: #e0eafc;
+  }
+  
+  .cta .btn-light {
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .cta .btn-light:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }

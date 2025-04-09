@@ -1,0 +1,65 @@
+#services {
+    background-color: var(--primary-color);
+  }
+  
+  /* Title & Subtitle */
+  .services__title {
+    color: #ffffff;
+  }
+  
+  .services__subtitle {
+    color: #dfe4ec;
+  }
+  
+  /* Tabs */
+  .services__tabs .nav-link {
+    border-radius: 50px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .services__tabs .nav-link:hover {
+    border-color: var(--secondary-color);
+    color: #fff !important;
+  }
+  
+  .services__tabs .nav-link.active {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: #fff !important;
+  }
+  
+  /* Cards */
+  .services__card {
+    background-color: #ffffff;
+  border-radius: 10px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .services__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Icon */
+  .services__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(18, 65, 120, 0.1);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  
+  /* Title + Desc */
+  .services__card-title {
+    color: var(--primary-color) !important;
+    font-size: 1.1rem;
+  }
+  
+  .services__card-desc {
+    color: black;
+  }
