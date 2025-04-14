@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function Register() {
+function Register({ setUser }) {  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -62,11 +62,12 @@ function Register() {
     e.preventDefault();
     setError('');
     if (!validateForm()) return;
-
+  
     setIsLoading(true);
-
+  
     try {
-      const response = await fetch('https://final-project-0vf0.onrender.com/api/register', {
+      // Register the user
+      const registerRes = await fetch('https://final-project-0vf0.onrender.com/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -76,17 +77,37 @@ function Register() {
           password: formData.password
         })
       });
-
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Registration failed');
-
-      navigate('/login');
+  
+      const registerData = await registerRes.json();
+      if (!registerRes.ok) throw new Error(registerData.error || 'Registration failed');
+  
+      // Auto-login the user
+      const loginRes = await fetch('https://final-project-0vf0.onrender.com/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        })
+      });
+  
+      const loginData = await loginRes.json();
+      if (!loginRes.ok) throw new Error(loginData.error || 'Login after registration failed');
+  
+      // Save user + update state
+      localStorage.setItem('user', JSON.stringify(loginData.user));
+      setUser(loginData.user);
+  
+      // Redirect to dashboard
+      navigate('/dashboard');
+  
     } catch (err) {
       setError(err.message);
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   const getStrengthLabel = () => {
     if (passwordStrength === 0) return 'Too short';

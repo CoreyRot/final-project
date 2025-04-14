@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function Login() {
+function Login({ setUser }) {  
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [rememberMe, setRememberMe] = useState(false);
@@ -48,9 +48,11 @@ function Login() {
       if (!res.ok) throw new Error(data.error || 'Login failed');
 
       localStorage.setItem('user', JSON.stringify(data.user));
+      setUser(data.user);
       rememberMe
         ? localStorage.setItem('rememberedEmail', formData.email)
         : localStorage.removeItem('rememberedEmail');
+      
 
       navigate('/dashboard');
     } catch (err) {
