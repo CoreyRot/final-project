@@ -13,13 +13,13 @@ border-radius: 10px !important;
 }
 
 .corporate__card {
-border-radius: 10px !important;
+  border-radius: 10px !important;
   color: #fff !important;
+  .card-title {
+    color: #fff !important;
+  }
 }
 
-.card-title {
-  color: #fff !important;
-}
 .corporate__card--hours {
   background-color: var(--primary-color) !important;
 }
